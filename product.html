@@ -1,76 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
+
 <body>
     <!--Responsive nav bar-->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-2xl sticky top-0 z-10">
-        <h1 class="text-2xl">GREENDEN</h1>
+        <h1 class="text-2xl font-medium drop-shadow-lg">GREENDEN</h1>
+        <div>
+            <div class="md:hidden">
+                <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size w-6 h-6 md:hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="size w-6 h-6 md:hidden">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
 
-
-        <ul class="flex gap-5 text-gray-600 hidden md:flex">
-            <li>
-                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
-            </li>
-            <li>
-                <a class="hover:underline hover:text-black" href="./product.html">Products</a>
-            </li>
-            <li>
-                <a class="hover:underline hover:text-black" href="./contact.html">Contacts</a>
-            </li>
-        </ul>
+            <ul class="flex gap-5 text-gray-600 hidden md:flex">
+                <li>
+                    <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="./product.html">Products</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="./contact.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%;height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center  text-gray-600">
+            <li><a href="./index.html" class="hover:text-black hover:underline">Home</a></li>
+            <li><a href="./product.html" class="hover:text-black hover:underline">Products</a></li>
+            <li><a href="./contact.html" class="hover:text-black hover:underline">Contact</a></li>
+        </ul>
+    </section>
 
     <!--products-->
     <section class="p-4 text-center ">
         <h1 class=" font-bold mt-5 text-3xl">Our Products</h1>
-        <input type="text" placeholder="Search for a product...." class="border border-black p-2 mt-5" style="width: 80%;">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-            <div>
+        <input id="search" type="text" placeholder="Search for a product...." class="border border-black p-2 mt-5"
+            style="width: 80%;">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+            <div class="text-center">
                 <img src="./images/b1.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Violet Flowers</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b2.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b3.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Sunflower Plant</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b4.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Spider Plant</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b5.png" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h1>Daisy Flowers</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b6.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>BudRose Plant</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b7.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Oxide Plant</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/b8.png" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Buttonred Plant</h1>
                 <p>$20</p>
@@ -85,5 +105,8 @@
         <p>The Standard chunk of lorem ipsum used since the 1500s is reproduced below for those interest </p>
         <p>@ 2025 Greenday.com</p>
     </section>
+
+    <script src="product.js"></script>
 </body>
+
 </html>
